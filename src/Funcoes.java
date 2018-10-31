@@ -19,19 +19,19 @@ public class Funcoes {
 		try {
 			if(file.isFile()) {
 				Date d = new Date(file.lastModified());
-				System.out.println("Essas sÃ£o as informaÃ§Ãµes do seu arquivo:");
+				System.out.println("Essas são as informações do seu arquivo:");
 				System.out.println("~~~~~~~~~~~~~~~~~~~~");
 				System.out.println("Local: "+ file.getName());
 				System.out.println("Tamanho utilizado: "+ (file.length())/1024+"KB");
-				System.out.println("Ãšltima modificaÃ§Ã£o em: "+ d);
+				System.out.println("última modificação em: "+ d);
 				if(file.isHidden()) {
-					System.out.println("Ã‰ um arquivo oculto");
+					System.out.println("É um arquivo oculto");
 				}else {
-					System.out.println("NÃ£o Ã© um arquivo oculto");
+					System.out.println("Não é um arquivo oculto");
 				}
 				
 			} else {
-				System.out.println("NÃ£o Ã© possivel mostrar informaÃ§Ãµes de diretÃ³rios nessa atualizaÃ§Ã£o");
+				System.out.println("Não é possivel mostrar informações de diretórios nessa atualização");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -123,7 +123,7 @@ public class Funcoes {
 				   for(File dir : diretorio.listFiles()) {
 					if(dir.getName().toString().toLowerCase().contains(termo.toLowerCase())) {
 						if(dir.isDirectory()){
-			        		System.out.println("Foi encontrado um diretÃ³rio em "+dir);
+			        		System.out.println("Foi encontrado um diretório em "+dir);
 			        	}else if(dir.isFile()) {
 			        		System.out.println("Foi encontrado um arquivo em "+dir);
 			        	}
